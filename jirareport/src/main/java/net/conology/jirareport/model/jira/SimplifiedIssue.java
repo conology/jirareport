@@ -5,7 +5,7 @@ import net.conology.jirareport.interfaces.IPerson;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class Issue implements IIssue {
+public class SimplifiedIssue implements IIssue {
 	int timeSpent=0;
 	int timeEstimate=0;
 	String description = "";

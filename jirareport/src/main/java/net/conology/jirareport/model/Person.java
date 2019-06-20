@@ -1,4 +1,5 @@
 package net.conology.jirareport.model;
+
 public class Person {
 	
 private int id;
