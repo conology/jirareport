@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Persons Directory</title>
+</head>
+
+<body>
+
+	<h3>Persons Directory</h3>
+	<hr>
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Sum of Hours</th>
+				<th>Remaining Hours</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempPerson : ${persons}">
+			
+				<td th:text="${tempPerson.id}" />	
+				<td th:text="${tempPerson.name}" />	
+				<td th:text="${tempPerson.sumOfTotalHours}" />	
+				<td th:text="${tempPerson.remainingHours}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+	
+</body>
+</html>
+
+
+
