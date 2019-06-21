@@ -14,6 +14,9 @@ import net.conology.jirareport.model.*;
 
 import net.conology.jirareport.model.Person;
 
+//Study this, and prepare for the next session on Monday.
+protected String = "TestPullRequest== "
+
 @Controller
 @RequestMapping("/persons")
 public class PersonController {
