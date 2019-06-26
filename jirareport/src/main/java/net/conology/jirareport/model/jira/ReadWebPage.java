@@ -1,5 +1,6 @@
 package net.conology.jirareport.model.jira;
 
+
 import java.io.IOException;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -25,8 +26,8 @@ public class ReadWebPage {
 
             HttpEntity entity = response.getEntity();
             String content = EntityUtils.toString(entity);
-            System.out.println(content);
-            System.out.println("\n\n\n\n");
+           // System.out.println(content);
+           // System.out.println("\n\n\n\n");
             return content;
         } finally {
 
