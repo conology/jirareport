@@ -8,10 +8,11 @@ import net.conology.jirareport.interfaces.ISprint;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class Sprint implements ISprint {
-	ArrayList<SimplifiedIssue> issues;
+	
+	
+	ArrayList<SimplifiedIssue> issues = new ArrayList<SimplifiedIssue>();
 	String teamName;
 	Date startDate, endDate;
-	SimplifiedIssue[] issueList;
 	
 	
 	public void addIssue(SimplifiedIssue issue) {
@@ -50,11 +51,5 @@ public class Sprint implements ISprint {
 		this.endDate = endDate;
 	}
 	
-	public SimplifiedIssue[] getIssueList() {
-		return issueList;
-	}
 	
-	public void setIssueList(SimplifiedIssue[] issueList) {
-		this.issueList = issueList;
-	}
 }

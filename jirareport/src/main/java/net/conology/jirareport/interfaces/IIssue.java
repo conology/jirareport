@@ -8,7 +8,7 @@ public interface IIssue {
 	String description = "";
 	String id = "";  //integer... typically
 	String key = ""; //TRA-num
-	IPerson assignee = null;
+	String assignee = null;
 	int timeLeft=0;
 	
 }

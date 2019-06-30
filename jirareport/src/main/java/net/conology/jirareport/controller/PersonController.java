@@ -1,6 +1,5 @@
 package net.conology.jirareport.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -11,11 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import net.conology.jirareport.model.*;
+import net.conology.jirareport.model.jira.JiraConnector;
+import net.conology.jirareport.model.jira.Sprint;
 
-import net.conology.jirareport.model.Person;
 
-//Study this, and prepare for the next session on Monday.
-protected String = "TestPullRequest== "
 
 @Controller
 @RequestMapping("/persons")
@@ -27,7 +25,7 @@ public class PersonController {
 	
 	@PostConstruct
 	private void loadData() {
-		
+		/*
 		// create persons
 		Person per1 = new Person(1, "Aleš",40,0);
 		Person per2 = new Person(2, "Rok",35,5);
@@ -40,7 +38,25 @@ public class PersonController {
 		// add to the list
 		thePersons.add(per1);
 		thePersons.add(per2);
-		thePersons.add(per3);
+		thePersons.add(per3);*/
+		
+		// get Jira Connection
+				JiraConnector con = new JiraConnector("willm.tueting@conology.net", "m628BRhnEj5wDvDFi9cXDE59",
+						"http://conology.atlassian.net");
+				// JiraConnector("willm.tueting@conology.net","TestingTesting","http://conology.atlassian.net");
+				// JiraConnector("rok.pusnik@conology.onmicrosoft.com","nZvnprWZ234FK4RjIDWk32E6","http://conology.atlassian.net");
+				
+				
+				
+				// transform to sprint
+				Sprint currentSprint = con.getSprint();
+				
+				// calculate team efforts
+				CalculateTeamWorkload teamWorkload = new CalculateTeamWorkload();
+				thePersons = teamWorkload.getTeamWorkload(currentSprint).getTeam();
+				
+				// display efforts
+				
 	
 	}
 	
