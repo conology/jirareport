@@ -8,9 +8,10 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jirareport</groupId>
+	<groupId>net.conology</groupId>
 	<artifactId>jirareport</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>jirareport</name>
 	<description>Jira Report v1</description>
 	
@@ -35,15 +36,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-aws</artifactId>
-		</dependency>-->
-
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<!-- <scope>test</scope> -->
 		</dependency>
 		
 		<dependency>
@@ -56,6 +57,11 @@
 		    <artifactId>fugue</artifactId>
 		    <version>2.6.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+ 	     	<artifactId>junit</artifactId>
+	 	</dependency>
 	</dependencies>
 
 	<dependencyManagement>

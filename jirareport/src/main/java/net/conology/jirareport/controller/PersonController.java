@@ -25,39 +25,22 @@ public class PersonController {
 	
 	@PostConstruct
 	private void loadData() {
-		/*
-		// create persons
-		Person per1 = new Person(1, "Aleš",40,0);
-		Person per2 = new Person(2, "Rok",35,5);
-		Person per3 = new Person(3, "Bojan",20,20);
-		
-
-		// create the list
-		thePersons = new ArrayList<>();
-		
-		// add to the list
-		thePersons.add(per1);
-		thePersons.add(per2);
-		thePersons.add(per3);*/
-		
-		// get Jira Connection
+				
+				// get Jira Connection
 				JiraConnector con = new JiraConnector("willm.tueting@conology.net", "m628BRhnEj5wDvDFi9cXDE59",
 						"http://conology.atlassian.net");
 				// JiraConnector("willm.tueting@conology.net","TestingTesting","http://conology.atlassian.net");
 				// JiraConnector("rok.pusnik@conology.onmicrosoft.com","nZvnprWZ234FK4RjIDWk32E6","http://conology.atlassian.net");
-				
-				
+	
 				
 				// transform to sprint
 				Sprint currentSprint = con.getSprint();
+				
 				
 				// calculate team efforts
 				CalculateTeamWorkload teamWorkload = new CalculateTeamWorkload();
 				thePersons = teamWorkload.getTeamWorkload(currentSprint).getTeam();
 				
-				// display efforts
-				
-	
 	}
 	
 	// add mapping for "/list"

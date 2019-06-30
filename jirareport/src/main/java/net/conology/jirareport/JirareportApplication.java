@@ -4,13 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
-
-import net.conology.jirareport.model.CalculateTeamWorkload;
-import net.conology.jirareport.model.jira.JiraConnector;
-import net.conology.jirareport.model.jira.Sprint;
 
 @SpringBootApplication
 public class JirareportApplication {
