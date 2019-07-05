@@ -25,7 +25,18 @@ public class PersonController {
 	
 	@PostConstruct
 	private void loadData() {
-				
+	/*// create persons **HARDCODED DATA FOR TESTING**
+		Person per1 = new Person(1, "Aleš",89,0);
+		Person per2 = new Person(2, "Rok",35,5);
+		Person per3 = new Person(3, "Bojan",20,21);
+
+		// create the list
+		thePersons = new ArrayList<>();
+		
+		// add to the list
+		thePersons.add(per1);
+		thePersons.add(per2);
+		thePersons.add(per3);*/			
 				// get Jira Connection
 				JiraConnector con = new JiraConnector("willm.tueting@conology.net", "m628BRhnEj5wDvDFi9cXDE59",
 						"http://conology.atlassian.net");
