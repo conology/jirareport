@@ -2,16 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
 	<title>Persons Directory</title>
 </head>
 
 <body>
-
+<div class="container">
+	
 	<h3>Persons Directory</h3>
 	<hr>
 	
-	<table border="1">
-		<thead>
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
 			<tr>
 				<th>ID</th>
 				<th>Name</th>
@@ -22,19 +31,15 @@
 		
 		<tbody>
 			<tr th:each="tempPerson : ${persons}">
-			
-				<td th:text="${tempPerson.id}" />	
+			    <td th:text="${tempPerson.id}" />	
 				<td th:text="${tempPerson.name}" />	
-				<td th:text="${tempPerson.sumOfTotalHours}" />	
-				<td th:text="${tempPerson.remainingHours}" />	
-				
+				<td th:text="${tempPerson.sumOfTotalHours}" th:style="${tempPerson.sumOfTotalHours > 40} ? ${'background-color: #DC143C; color:#FFFFFF;'}" />	
+				<td th:text="${tempPerson.remainingHours}" th:style="${tempPerson.remainingHours > 20} ? ${'background-color: #0033EE; color:#FFFFFF;'}" 
+				th:styleappend="${tempPerson.remainingHours <= 5 } ? ${'background-color: #68BB59; color:#FFFFFF;'}"  />	
 			</tr>
 		</tbody>		
 	</table>
 	
-	
+	</div>>
 </body>
 </html>
-
-
-
